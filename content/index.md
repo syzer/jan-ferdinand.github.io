@@ -1,3 +1,8 @@
+---
+author: jfs
+date: 2022-01-01
+---
+
 # Jan Ferdinand Sauer
 
 Hi there!
