@@ -1,0 +1,7 @@
+[[project]]
+name = "zudoku.xyz"
+desc = "No-math explainer intuiting that Zero-Knowledge technology is not magic. Uses Sudokus."
+links = [
+    {icon = "ri-github-fill", url = "https://github.com/42ndTowel/zudoku"},
+    {icon = "ri-window-2-fill", url = "https://zudoku.xyz"},
+]

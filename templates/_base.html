@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{% block lang %}{% endblock lang %}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>{% block title %}{% endblock title %}</title>
+    <meta name="description" content="{% block desc %}{% endblock desc %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Jost&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/var.css">
+    <link rel="stylesheet" href="/css/base.css">
+    {% block css %}{% endblock css %}
+    {% if config.extra.analytics == 'umami' -%}
+    <script async defer data-website-id="{{ config.extra.umami.website_id }}" src="{{ config.extra.umami.src }}"></script>
+    {%- endif -%}
+</head>
+
+<body>
+    <script>if(localStorage.getItem('theme')=='dark'){document.body.classList.add('dark-mode');}</script>
+    {% block content %}{% endblock content -%}
+    <script src="/js/dark.js"></script>
+    {%- block script %}{% endblock script %}
+</body>
+
+</html>
