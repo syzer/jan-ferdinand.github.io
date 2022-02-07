@@ -21,10 +21,12 @@
 <main>
     {% for post in section.pages | sort(attribute="date") | reverse -%}
     <a class="post" href="{{ post.permalink }}">
-        <span>{{ post.title }}</span>
-        <span class="date">{{ post.date | date}}</span>
+        <span class="post-header">
+            <span class="title">{{ post.title }}</span>
+            <span class="date">{{ post.date | date}}</span>
+        </span>
         {% if post.summary -%}
-        <span class="summary">{{ post.summary | trim | striptags | safe }}</span>
+        <p class="summary">{{ post.summary | replace(from="<p>", to="") | replace(from="</p>", to="<br><br>") | trim | trim_end_matches(pat="<br><br>") | safe }}</p>
         {% endif -%}
     </a>
     {% endfor -%}
