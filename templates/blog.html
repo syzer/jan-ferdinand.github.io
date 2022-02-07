@@ -19,16 +19,14 @@
 {% block content %}
 {% include "_blog_header.html" %}
 <main>
-    {% for category,posts in section.pages | group_by(attribute="taxonomies.categories.0") -%}
-    <div class="title">{{ category }}</div>
-    <div class="post-list">
-        {% for post in posts | sort(attribute="date") | reverse -%}
-        <a class="post" href="{{ post.permalink }}">
-            <span>{{ post.title }}</span>
-            <span class="date">{{ post.date | date}}</span>
-        </a>
-        {% endfor -%}
-    </div>
+    {% for post in section.pages | sort(attribute="date") | reverse -%}
+    <a class="post" href="{{ post.permalink }}">
+        <span>{{ post.title }}</span>
+        <span class="date">{{ post.date | date}}</span>
+        {% if post.summary -%}
+        <span class="summary">{{ post.summary | trim | striptags | safe }}</span>
+        {% endif -%}
+    </a>
     {% endfor -%}
 </main>
 {% include "_footer.html" %}

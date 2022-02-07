@@ -10,7 +10,6 @@ generate_feed = false
 feed_filename = "feed.xml"
 taxonomies = [
     {name = "tags"},
-    {name = "categories"}
 ]
 
 [markdown]

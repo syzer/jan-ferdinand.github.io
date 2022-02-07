@@ -1,12 +1,11 @@
 +++
 title = "A look into the future!"
-date = 2021-02-28
+date = 2022-02-28
 draft = false
 
 template = "post.html"
 
 [taxonomies]
-categories = [""]
 tags = ["one", "two", "three", "test post"]
 +++
 

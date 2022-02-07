@@ -5,7 +5,6 @@ date = 2022-02-06
 template = "post.html"
 
 [taxonomies]
-categories = [""]
 tags = ["test post"]
 +++
 
