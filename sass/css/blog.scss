@@ -30,11 +30,15 @@ main {
         &:hover {
             background-color: var(--primary-light-color);
         }
+        color: var(--text-primary-color);
         text-decoration: none;
-        color: var(--primary-color);
         .title {
+            color: var(--text-primary-color);
             margin: 0;
             padding: 0;
+        }
+        .date {
+            color: var(--text-light-color);
         }
     }
 
@@ -78,7 +82,13 @@ main {
 
 body.dark-mode {
     main .title {
-        color: var(--dark-text-second-color);
+        color: var(--dark-text-primary-color);
+    }
+    main .post {
+        color: var(--dark-text-primary-color);
+        .date {
+            color: var(--dark-text-light-color);
+        }
     }
     main .post:hover {
         background-color: var(--dark-primary-light-color);
