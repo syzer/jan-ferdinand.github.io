@@ -22,7 +22,7 @@
     {% for category,posts in section.pages | group_by(attribute="taxonomies.categories.0") -%}
     <div class="title">{{ category }}</div>
     <div class="post-list">
-        {% for post in posts | slice(end=section.extra.show_post_num) -%}
+        {% for post in posts | sort(attribute="date") | reverse | slice(end=section.extra.show_post_num) -%}
         <a class="post" href="{{ post.permalink }}">
             <span>{{ post.title }}</span>
             <span class="date">{{ post.date | date}}</span>
