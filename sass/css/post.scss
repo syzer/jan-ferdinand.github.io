@@ -17,6 +17,7 @@ main {
     width: 100%;
     max-width: 750px;
     min-height: calc(100vh - 230px);
+    margin: 30px auto;
 }
 
 article {
@@ -79,7 +80,7 @@ article {
     }
 
     p {
-        font-size: 1em;
+        font-size: 1.1em;
         line-height: var(--paragraph-line-height);
         word-wrap: break-word;
     }
