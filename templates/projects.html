@@ -20,11 +20,17 @@
 {% block content %}
 <header {% if config.extra.blur_effect %} class="blur" {% endif %}>
     <div class="top">
-        <a class="header projects" href="/projects"><i class="{{ config.extra.projects_icon }} ri-2x"></i><span>Projects</span></a>
-        <a class="back" href="/"><i class="ri-arrow-left-s-line ri-1x"></i><span>Home</span></a>
+        <a class="header projects" href="/projects">
+            <img src="/icons/{{ config.extra.projects_icon }}.svg" class="filter-dark" width="36px">
+            <span>Projects</span>
+        </a>
+        <a class="back" href="/">
+            <img src="/icons/arrow-left-s-line.svg" class="filter-dark" width="14px">
+            <span>Home</span>
+        </a>
         <div class="icon">
-            <a id="go-home" href="/" aria-label="home"><i class="{{ config.extra.home_icon }} ri-xl"></i></a>
-            <button id="color-toggle" aria-label="dark light mode switch"><i class="ri-moon-fill ri-xl"></i></button>
+            <a id="go-home" href="/" aria-label="home"><img src="/icons/{{ config.extra.home_icon }}.svg" class="filter-dark" width="24px"></a>
+            <button id="color-toggle" aria-label="dark light mode switch"><img src="/icons/moon-fill.svg" class="filter-dark" width="24px"></button>
         </div>
     </div>
     <div id="progress-bar"></div>
@@ -38,7 +44,7 @@
         <div class="desc">{{ proj.desc | trim | markdown | safe }}</div>
         <div class="links">
             {% for link in proj.links -%}
-            <a href="{{ link.url }}" target="_blank" rel='noreferrer noopener'><i class="{{ link.icon }} ri-xl"></i></a>
+            <a href="{{ link.url }}" target="_blank" rel='noreferrer noopener'><img src="/icons/{{ link.icon }}.svg" class="filter-dark" width="24px"></a>
             {%- endfor %}
         </div>
     </div>

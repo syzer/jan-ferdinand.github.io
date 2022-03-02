@@ -1,19 +1,17 @@
 const toggleBtn = document.querySelector('#color-toggle');
-const toggleBtnIcon = document.querySelector('#color-toggle > i');
+const toggleBtnIcon = document.querySelector('#color-toggle > img');
 
 const prefersDark = window.matchMedia("(prefers-color-scheme: dark)");
 const prefersLight = window.matchMedia("(prefers-color-scheme: light)");
 
 function toggleDarkTheme() {
-    toggleBtnIcon.classList.remove('ri-moon-fill');
-    toggleBtnIcon.classList.add('ri-sun-fill');
+    toggleBtnIcon.src = '/icons/sun-fill.svg';
     document.body.classList.add('dark-mode');
     currentTheme = "dark";
     localStorage.setItem("theme", "dark");
 }
 function toggleLightTheme() {
-    toggleBtnIcon.classList.remove('ri-sun-fill');
-    toggleBtnIcon.classList.add('ri-moon-fill');
+    toggleBtnIcon.src = '/icons/moon-fill.svg';
     document.body.classList.remove('dark-mode');
     currentTheme = "light";
     localStorage.setItem("theme", "light");

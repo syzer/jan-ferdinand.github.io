@@ -9,11 +9,17 @@ body {
     min-height: 100%;
     background-color: var(--bg-color);
     color: var(--text-primary-color);
+    .filter-dark{
+      filter: invert(27%);
+    }
 }
 
 body.dark-mode {
   background-color: var(--dark-bg-color);
   color: var(--dark-text-primary-color);
+  .filter-dark{
+    filter: invert(93%);
+  }
 }
 
 a {

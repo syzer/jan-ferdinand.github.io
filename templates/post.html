@@ -38,7 +38,7 @@
                 <div class="tags">
                     {% for tag in page.taxonomies.tags -%}
                     {% set tag_slugify = tag | slugify -%}
-                    <a class="tag" href="{{ config.base_url ~ '/tags/' ~ tag_slugify }}"><i class="ri-hashtag ri-sm"></i><span>{{ tag }}</span></a>
+                    <a class="tag" href="{{ config.base_url ~ '/tags/' ~ tag_slugify }}"><span>#{{ tag }}</span></a>
                     {%- endfor %}
                 </div>
             </div>
@@ -52,7 +52,7 @@
             {% if show_outdate_warn -%}
             <blockquote id="outdate_warn" class="note hidden" data-days="{{ outdate_warn_days }}"
                 data-text1="{{ config.extra.outdate_warn_text_before }}" data-text2="{{ config.extra.outdate_warn_text_after }}">
-                <i class="ri-alarm-warning-line ri-lg"></i><span></span>
+                <img src="/icons/alarm-warning-line.svg" class="filter-dark" width="24px"><span></span>
             </blockquote>
             {%- endif %}
             
@@ -66,7 +66,7 @@
             {%- endif %}
             {%- if cc %}
             <blockquote id="cc_license" class="note">
-                <i class="ri-creative-commons-line ri-lg"></i>
+                <img src="/icons/creative-commons-line.svg" class="filter-dark" width="24px">
                 <div class="content">{{ config.extra.cc_license_statement | trim | markdown | safe }}</div>
             </blockquote>
             {%- endif %}
@@ -96,7 +96,7 @@
         </nav>
         {%- endif %}
         {%- if config.extra.back_to_top_button %}
-        <a id="back-to-top" aria-label="back to top" href="#top"><i class="ri-arrow-up-s-line ri-2x"></i></a>
+        <a id="back-to-top" aria-label="back to top" href="#top"><img src="/icons/arrow-up-s-line.svg" class="filter-dark" width="24px"></a>
         {%- endif %}
     </aside>
 </div>

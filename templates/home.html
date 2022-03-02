@@ -30,21 +30,25 @@
     <div class="link">
         <div class="left">
             <a href="/blog" id="blog">
-                <i class="{{ config.extra.blog_icon }} ri-xl"></i>
+                <img src="/icons/{{ config.extra.blog_icon }}.svg" class="filter-dark" width="24px">
                 <span>Blog</span>
             </a>
             {% if config.extra.show_projects -%}
             <a href="/projects" id="projects">
-                <i class="{{ config.extra.projects_icon }} ri-xl"></i>
+                <img src="/icons/{{ config.extra.projects_icon }}.svg" class="filter-dark" width="24px">
                 <span>Projects</span>
             </a>
             {% endif -%}
         </div>
         <div class="right">
             {% for link in config.extra.links -%}
-            <a href="{{ link.url }}" aria-label="{{ link.name }}" target="_blank" rel='noreferrer noopener'><i class="{{ link.icon }} ri-xl"></i></a>
+            <a href="{{ link.url }}" aria-label="{{ link.name }}" target="_blank" rel='noreferrer noopener'>
+                <i><img src="/icons/{{ link.icon }}.svg" class="filter-dark" width="24px"></i>
+            </a>
             {% endfor -%}
-            <button id="color-toggle" aria-label="dark light mode switch"><i class="ri-moon-fill ri-xl"></i></button>
+            <button id="color-toggle" aria-label="dark light mode switch">
+                <img src="/icons/moon-fill.svg" class="filter-dark" width="24px">
+            </button>
         </div>
     </div>
     <div class="brief">{{ section.content | trim | safe }}</div>

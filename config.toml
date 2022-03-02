@@ -39,16 +39,16 @@ show_id = false
 show_projects = true
 
 # == Icons, you can choose at https://remixicon.com/
-blog_icon = "ri-pen-nib-fill"
-projects_icon = "ri-flask-fill"
-home_icon = "ri-user-3-fill"
-rss_icon = "ri-rss-fill"
-toc_icon = "ri-menu-2-fill"
+blog_icon = "pen-nib-fill"
+projects_icon = "flask-fill"
+home_icon = "user-3-fill"
+rss_icon = "rss-fill"
+toc_icon = "menu-2-fill"
 
 # == Social media links
 links = [
-    {name = "GitHub", icon = "ri-github-fill", url = "https://github.com/42ndTowel"},
-    {name = "Email", icon = "ri-mail-fill", url = "mailto:jf@jfs.sh"}
+    {name = "GitHub", icon = "github-fill", url = "https://github.com/42ndTowel"},
+    {name = "Email", icon = "mail-fill", url = "mailto:jf@jfs.sh"}
     # Your can add more links
 ]
 
