@@ -15,6 +15,7 @@
 {% endblock desc %}
 
 {% block css -%}
+<link rel="stylesheet" href="/css/katex.min.css">
 <link rel="stylesheet" href="/css/header.css" />
 <link rel="stylesheet" href="/css/footer.css" />
 <link rel="stylesheet" href="/css/post.css" />
@@ -108,16 +109,18 @@
 {%- if page.extra.outdate_warn is defined %} {% set show_outdate_warn = page.extra.outdate_warn %}
 {%- else %} {% set show_outdate_warn = config.extra.outdate_warn %} {% endif %}
 {%- if show_outdate_warn %}
-<script src="/js/outdate.js"></script>
+    <script src="/js/outdate.js"></script>
 {%- endif %}
 {%- if page.extra.toc is defined %} {% set show_toc = page.extra.toc %}
 {%- else %} {% set show_toc = config.extra.toc %} {% endif %}
 {%- if show_toc %}
-<script src="/js/toc.js"></script>
+    <script src="/js/toc.js"></script>
 {%- endif %}
 {%- if config.extra.progress_bar %}
-<script src="/js/progress.js"></script>
+    <script src="/js/progress.js"></script>
 {%- endif %}
-<script src="/js/lightense.min.js"></script>
-<script src="/js/img.js"></script>
+    <script src="/js/lightense.min.js"></script>
+    <script src="/js/img.js"></script>
+    <script src="/js/katex.min.js"></script>
+    <script src="/js/mathtex-script-type.min.js"></script>
 {% endblock script %}
