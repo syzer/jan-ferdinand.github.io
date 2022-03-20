@@ -1,0 +1,49 @@
+/*
+Adapted from https://github.com/edwardtufte/tufte-css
+*/
+
+.marginnote {
+    float: right;
+    clear: right;
+    margin-right: -60%;
+    width: 50%;
+    margin-top: 0.3rem;
+    margin-bottom: 0;
+    position: relative;
+    font-size: 0.8rem;
+}
+
+blockquote .marginnote {
+    margin-right: -82%;
+    min-width: 59%;
+    text-align: left;
+}
+
+input.margin-toggle {
+    display: none;
+}
+
+label.margin-toggle {
+    display: none;
+}
+
+@media (max-width: 1490px) {
+    label.margin-toggle {
+        display: inline;
+    }
+
+    .marginnote {
+        display: none;
+    }
+
+    .margin-toggle:checked + .marginnote {
+        display: block;
+        float: left;
+        left: 1rem;
+        clear: both;
+        width: 95%;
+        margin: 1rem 2.5%;
+        vertical-align: baseline;
+        position: relative;
+    }
+}
