@@ -160,8 +160,9 @@ article {
         background-color: var(--primary-light-color);
     }
     th, td {
+        padding-left: 10px;
+        padding-right: 10px;
         line-height: 2;
-        text-align: center;
         border: 1px solid var(--primary-light-color);
     }
     
