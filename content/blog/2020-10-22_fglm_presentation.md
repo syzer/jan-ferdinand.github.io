@@ -16,7 +16,6 @@ only to then realize that you _actually_ wanted it in another order
 ?
 I know, happens _all_ the time…
 But fret not, FGLM can convert between the two orders, and you don't have to start your computation from scratch.
-<!-- more -->
 
 ![A visual summary of the execution of FGLM on an example input.](/blog/2020-10-22_fglm_summary.png "Left, a ")
 
