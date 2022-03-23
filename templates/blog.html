@@ -28,7 +28,12 @@
             <span class="date">{{ post.date | date}}</span>
         </span>
         {% if post.summary -%}
-        <p class="summary">{{ post.summary | replace(from="<p>", to="") | replace(from="</p>", to="<br><br>") | trim | trim_end_matches(pat="<br><br>") | safe }}</p>
+        <p class="summary">{{ post.summary
+            | replace(from="<p>", to="")
+            | replace(from="</p>", to="<br><br>")
+            | trim
+            | trim_end_matches(pat="<br><br>")
+            | safe }}</p>
         {% endif -%}
     </a>
     {% endfor -%}
