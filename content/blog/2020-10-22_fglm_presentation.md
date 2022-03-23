@@ -5,6 +5,10 @@ title = "Converting Gröbner bases with FGLM"
 tags = ["Algebra", "Gröbner basis", "Term Order Change", "FGLM", "AS Dicrete Mathematics"]
 +++
 
+| 🛈 |
+| :- |
+| I originally wrote this post when working for [AS Discrete Mathematics](https://asdm.gmbh) as part of a project sponsored by the [Ethereum Foundation](https://ethereum.foundation/). It is reproduced here with friendly permission. |
+
 Have you ever computed a Gröbner basis in some monomial order
 {% katex() %}
 \prec_0
