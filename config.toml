@@ -4,6 +4,7 @@ title = "jfs.sh"
 description = "The rambling and tinkering of a climbing cryptographer."
 compile_sass = true
 build_search_index = false
+output_dir = "docs"
 
 minify_html = false
 generate_feed = false
