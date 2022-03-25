@@ -42,7 +42,7 @@ A use case where an AOC's simple algebraic description causes major speedups inv
 The most popular way to transform a permutation, like Rescue-Prime or Poseidon, into a hash function is the Sponge construction.
 On a high level, a Sponge looks like this:
 
-{{ figure(src="2021-06-28_sponge.png", caption="Stylized depiction of the Sponge construction.") }}
+{{ figure(src="/blog/2021-06-28_sponge.png", caption="Stylized depiction of the Sponge construction.") }}
 
 Any cryptographic hash function needs to be secure against inversion, i.e., computing a pre-image for a given hash digest must be so difficult as to be infeasible.
 For the Sponge construction, this largely depends on the plugged-in permutation.
@@ -52,7 +52,7 @@ This way, we get the smallest Sponge one can build.
 Consequently, if _this_ attack is infeasible, then Gröbner basis attacking a realistically sized Sponge definitely is.
 
 
-{{ figure(src="2021-06-28_last_squeeze.png", caption="A super-tiny Sponge. Barely deserves the name.") }}
+{{ figure(src="/blog/2021-06-28_last_squeeze.png", caption="A super-tiny Sponge. Barely deserves the name.") }}
 
 As the permutation, we use the two primitives Rescue-Prime and Poseidon with varying numbers of rounds.
 The prime field has size p = 65519, which is the largest 16-bit prime for which gcd(p-1, 3) = 1, meaning we can use exponent 3 in the S-Boxes.
@@ -112,7 +112,7 @@ The most important metric to consider is the growth of the degree of regularity 
 As we can see, the degree of regularity is pretty consistently 2 less than the Macaulay bound of the polynomials system for Rescue-Prime.
 The only exception happens at r = 2 rounds, an anomaly I don't believe deserves a lot of attention.
 
-{{ figure(src="2021-06-28_rescue_prime_dreg_develop.png", caption="Various metrics of the polynomial system for Rescue-Prime as a function in the number of rounds.") }}
+{{ figure(src="/blog/2021-06-28_rescue_prime_dreg_develop.png", caption="Various metrics of the polynomial system for Rescue-Prime as a function in the number of rounds.") }}
 
 Interestingly, the degree of the highest degree polynomial in the resulting reduced Gröbner basis – abbreviated as the degree of the Gröbner basis – is even lower than that.
 More importantly though, its growth seems to be only piecewise linear:
@@ -130,7 +130,7 @@ for Rescue-Prime, whereas Rescue's authors report
 for Rescue [[1, Section 6.1]](#references).
 Here is their figure for comparison:
 
-{{ figure(src="2021-06-28_rescue_dreg_develop_original_paper.png", caption="Some of the same metrics as above for the polynomial system for Rescue as a function in the number of rounds, as given by the authors. [1]") }}
+{{ figure(src="/blog/2021-06-28_rescue_dreg_develop_original_paper.png", caption="Some of the same metrics as above for the polynomial system for Rescue as a function in the number of rounds, as given by the authors. [1]") }}
 
 Extending this interpolation of the degree of regularity to an extrapolation can be used to estimate the required number of rounds to achieve a given security level.
 For this, we use the known complexity bound for the most performant Gröbner basis algorithm, which is
@@ -157,7 +157,7 @@ For Rescue-Prime, the working degree of F<sub>4</sub> increases strictly monoton
 every iteration of F<sub>4</sub>'s main loop means working with polynomials of degree exactly 1 higher than in the preceding iteration.
 That makes for a pretty dull figure:
 
-{{ figure(src="2021-06-28_rescue_prime_f4_degs.png", caption="For Rescue-Prime, F<sub>4</sub>'s working degree increases by 1 per iteration, independent of the number of rounds.") }}
+{{ figure(src="/blog/2021-06-28_rescue_prime_f4_degs.png", caption="For Rescue-Prime, F<sub>4</sub>'s working degree increases by 1 per iteration, independent of the number of rounds.") }}
 
 ## Poseidon
 
@@ -284,7 +284,7 @@ full rounds in more detail to simplify presentation.
 As before, the degree of regularity is the metric we're interested in the most.
 For example, for Poseidon (4,٭), i.e., 4 full rounds and a varying number of partial rounds, we get the following figure when plotting both the Macaulay bound and the system's degree of regularity.
 
-{{ figure(src="2021-06-28_poseidon_f4_dreg_develop.png", caption="Degree of regularity and Macaulay bound of the polynomial system for (4,٭)-round Poseidon as a function in the number of partial rounds.") }}
+{{ figure(src="/blog/2021-06-28_poseidon_f4_dreg_develop.png", caption="Degree of regularity and Macaulay bound of the polynomial system for (4,٭)-round Poseidon as a function in the number of partial rounds.") }}
 
 It appears the degree of regularity is growing slower than the Macaulay bound.
 For a more complete picture, the degrees of regularity for all successfully computed Gröbner bases are listed in the following table.
@@ -426,14 +426,14 @@ with varying number of partial rounds, we can plot the working degree of F<sub>4
 While the overall tendency is “up,” there are many iterations for which the working degree does not change, or even drops.
 I am unsure what exactly this means in terms of security, or if it means anything at all.
 
-{{ figure(src="2021-06-28_poseidon_4_f4_degs.png", caption="For Poseidon, F<sub>4</sub>'s working degree develops… interestingly.") }}
+{{ figure(src="/blog/2021-06-28_poseidon_4_f4_degs.png", caption="For Poseidon, F<sub>4</sub>'s working degree develops… interestingly.") }}
 
 # Comparison: Rescue-Prime vs Poseidon {#comparison}
 
 One of the most notable differences between the polynomial systems for Rescue-Prime and Poseidon is the growth rate of their respective degrees of regularity.
 For example, consider the following plot, where I have repeated the data for Rescue-Prime from above and added the Macaulay bound and degree of regularity for (٭,0)-Poseidon, i.e., varying the number of full rounds.
 
-{{ figure(src="2021-06-28_mac-bound_f4-deg_comparison.png", caption="
+{{ figure(src="/blog/2021-06-28_mac-bound_f4-deg_comparison.png", caption="
   For Rescue-Prime, the degree of regularity closely matches the Macaulay bound.
   For Poseidon, the Macaulay bound vastly overestimates the actual degree of regularity.
 ") }}
@@ -444,7 +444,7 @@ It's also nice to see the development of the used memory for a few instances, ev
 Below figure shows the required memory over time for 5, 6, and 7-round Rescue-Prime and (4,5), (4,6), (4,7)-round Poseidon.
 Recall that 7-round Rescue-Prime and (4,7)-round Poseidon both ran out of memory, i.e., terminated abnormally.
 
-{{ figure(src="2021-06-28_memory_vs_time.png", caption="Not significant but interesting: memory consumption over time for various polynomial systems.") }}
+{{ figure(src="/blog/2021-06-28_memory_vs_time.png", caption="Not significant but interesting: memory consumption over time for various polynomial systems.") }}
 
 By the jumps in memory consumption you can pretty clearly see where a new, bigger matrix was constructed.
 This corresponds to the iterations of F<sub>4</sub>.
@@ -490,9 +490,9 @@ Below, I have put some figures summarizing the AOCs Rescue-Prime and Poseidon, r
 The input, output, and constants are all vectors of the same length.
 They are contracted here to simplify presentation.
 
-{{ figure(src="2021-06-28_rescue_prime.png", caption="2-round Rescue-Prime. Note that a single round, made up of two half rounds, first uses exponent 3 and then ⅓.") }}
+{{ figure(src="/blog/2021-06-28_rescue_prime.png", caption="2-round Rescue-Prime. Note that a single round, made up of two half rounds, first uses exponent 3 and then ⅓.") }}
 
-{{ figure(src="2021-06-28_poseidon.png", caption="(2,1)-round Poseidon, i.e., the instance has 2 full rounds – 1 at the beginning, 1 at the end – and 1 partial round.") }}
+{{ figure(src="/blog/2021-06-28_poseidon.png", caption="(2,1)-round Poseidon, i.e., the instance has 2 full rounds – 1 at the beginning, 1 at the end – and 1 partial round.") }}
 
 # Appendix – Raw Data {#appendix-data}
 
