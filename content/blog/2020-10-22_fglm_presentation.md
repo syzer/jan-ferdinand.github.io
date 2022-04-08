@@ -7,7 +7,7 @@ tags = ["Algebra", "Gröbner basis", "Term Order Change", "FGLM", "AS Dicrete Ma
 
 | 🛈 |
 | :- |
-| I originally wrote this post when working for [AS Discrete Mathematics](https://asdm.gmbh) as part of a project sponsored by the [Ethereum Foundation](https://ethereum.foundation/). It is reproduced here with friendly permission. |
+| I originally wrote this post when working at [AS Discrete Mathematics](https://asdm.gmbh) as part of a project sponsored by the [Ethereum Foundation](https://ethereum.foundation/). It is reproduced here with friendly permission. |
 
 Have you ever computed a Gröbner basis in some monomial order
 {% katex() %}

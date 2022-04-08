@@ -7,7 +7,7 @@ tags = ["Algebra", "Gröbner basis", "Rescue-Prime", "Poseidon", "AS Discrete Ma
 
 | 🛈 |
 | :- |
-| I originally wrote this post when working for [AS Discrete Mathematics](https://asdm.gmbh) as part of a project sponsored by the [Ethereum Foundation](https://ethereum.foundation/). It is reproduced here with friendly permission. |
+| I originally wrote this post when working at [AS Discrete Mathematics](https://asdm.gmbh) as part of a project sponsored by the [Ethereum Foundation](https://ethereum.foundation/). It is reproduced here with friendly permission. |
 
 When estimating the security of a cipher or hash function, there are many different attack scenarios to consider.
 For Arithmetization Oriented Ciphers (AOCs), Gröbner basis attacks are a lot more threatening than they are to “traditional” ciphers, like the AES.
