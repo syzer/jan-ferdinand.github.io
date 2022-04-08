@@ -48,7 +48,7 @@ toc_icon = "menu-2-fill"
 
 # == Social media links
 links = [
-    {name = "GitHub", icon = "github-fill", url = "https://github.com/42ndTowel"},
+    {name = "GitHub", icon = "github-fill", url = "https://github.com/jan-ferdinand"},
     {name = "Email", icon = "mail-fill", url = "mailto:jf@jfs.sh"}
     # Your can add more links
 ]
