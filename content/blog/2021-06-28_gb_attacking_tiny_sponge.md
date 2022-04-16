@@ -89,7 +89,7 @@ Experiments like the ones described above generate quite a bunch of data.
 We're not gonna look at _everything_ here, I just want to highlight some parts.
 If you want to start digging deeper, you can find the raw data at [the end of this post](#appendix-data).
 
-The metric commonly used to estimate the complexity of a Gröbner basis computation is largely depending on the [degree of regularity(https://asdm.gmbh/2021/06/08/hilbert-reg/).
+The metric commonly used to estimate the complexity of a Gröbner basis computation is largely depending on the [degree of regularity](@/blog/2021-06-08_hilbert_reg.md).
 {% sidenote(label="dreg") %}
 In this post, I will be using ”degree of regularity“ and “maximum degree reached by F<sub>4</sub> during its execution” interchangeably.
 Indeed, it is an open question whether this is always true.
