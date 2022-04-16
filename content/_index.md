@@ -2,10 +2,8 @@
 template = 'home.html'
 +++
 
-Hi there!
+<br><br><br>
 
-This website is still work in progress.
-
-In the meantime, check out [zudoku.xyz](https://zudoku.xyz/), a primer to Zero-Knowledge Proof Systems without math or programming.
-
-Or dive into the beautiful world of [algebraic cryptanalysis](https://asdm.gmbh/2021/06/28/gb_experiment_summary/) of some recent arithmetization oriented hash functions.
+{% katex(block="true") %}
+2^{2^5} \cdot \prod_{i=0}^4\left( 2^{2^i} + 1 \right) + 1
+{% end %}
