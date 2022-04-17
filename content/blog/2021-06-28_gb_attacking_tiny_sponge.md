@@ -94,7 +94,7 @@ The metric commonly used to estimate the complexity of a Gröbner basis computat
 In this post, I will be using ”degree of regularity“ and “maximum degree reached by F<sub>4</sub> during its execution” interchangeably.
 Indeed, it is an open question whether this is always true.
 {% end %}
-This is [not based on a totally rigorous argument](https://asdm.gmbh/2021/05/18/dreg-insufficient-for-security/), but it seems to be “good enough” in practice.
+This is [not based on a totally rigorous argument](@/blog/2021-05-18_dreg-insufficient-for-security.md), but it seems to be “good enough” in practice.
 Consequently, quite a bit of the following will be about the degree of regularity and the Macaulay bound.
 {% sidenote(label="sok_gb") %}If you want to jog your memory on either of these concepts, I suggest taking a glance at [this document](https://ia.cr/2021/870).{% end %}
 The Macaulay bound is an upper bound for the degree of regularity, and their values coincide if a polynomial system is a [regular sequence](https://en.wikipedia.org/wiki/Regular_sequence).

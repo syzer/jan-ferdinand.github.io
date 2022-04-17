@@ -13,7 +13,7 @@ When attacking [AOCs](https://asdm.gmbh/arithmetization-oriented-ciphers/aoc-pro
 how complex is the Gröbner basis computation?
 One commonly used estimation is based on the _degree of regularity_.
 Intuitively, the degree of regularity is the degree of the highest-degree polynomials to appear during the Gröbner basis computation.
-([Whether this metric is good for estimating the AOC's security is a different matter](https://asdm.gmbh/2021/05/18/dreg-insufficient-for-security/).)
+([Whether this metric is good for estimating the AOC's security is a different matter](@/blog/2021-05-18_dreg-insufficient-for-security.md).)
 
 Unfortunately, different authors define the term “degree of regularity” differently.
 In this post, I use the understanding of Bardet et al. [1,2], which coincides with the well-defined _Hilbert regularity_.
