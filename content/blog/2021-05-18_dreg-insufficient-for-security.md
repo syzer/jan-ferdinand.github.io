@@ -10,7 +10,7 @@ tags = ["Algebra", "Gröbner basis", "Degree of Regularity", "AS Discrete Mathem
 | I originally wrote this post when working at [AS Discrete Mathematics](https://asdm.gmbh) as part of a project sponsored by the [Ethereum Foundation](https://ethereum.foundation/). It is reproduced here with friendly permission. |
 
 Cryptographic primitives designed to be algebraically simple – [AOCs](https://asdm.gmbh/arithmetization-oriented-ciphers/) – might be particularly vulnerable to algebraic attacks.
-One of the most threatening attack vectors in this category is the [Gröbner basis analysis](https://asdm.gmbh/2020/08/09/introduction-to-gb-attacks-on-aoc/).
+One of the most threatening attack vectors in this category is the [Gröbner basis analysis](@/blog/2020-08-12_introduction-to-gb-attacks-on-aoc.md).
 For a cipher or hash function to be considered secure, the Gröbner basis for any polynomial system derivable from the primitive needs to be intractable to compute.
 
 Unfortunately, the complexity of computing a Gröbner basis for a specific polynomial system is generally not known before the computation is completed.

@@ -2,7 +2,7 @@
 template = "post.html"
 title = "Converting Gröbner bases with FGLM"
 [taxonomies]
-tags = ["Algebra", "Gröbner basis", "Term Order Change", "FGLM", "AS Dicrete Mathematics"]
+tags = ["Algebra", "Gröbner basis", "Term Order Change", "Presentation", "FGLM", "AS Discrete Mathematics"]
 +++
 
 | 🛈 |
